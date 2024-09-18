@@ -1,0 +1,45 @@
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20%;
+    height: 100vh;
+}
+
+
+.role {
+    display: flex;
+    gap: 20px;
+   
+    
+    border-radius: 10px;
+    padding: 29px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    
+    &:disabled {
+        background-color: #cccccc;
+        cursor: not-allowed;
+    }
+
+
+    button {
+        padding: 20px 30px;
+        background-color: #fdfdfd;
+        border: 10px solid black;
+       border-radius: 10px;
+        color: rgb(0, 0, 0);
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+        
+        &:hover {
+            background-color: #0069d9;
+        }
+        
+        &:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+    } 
+}

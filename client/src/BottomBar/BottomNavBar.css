@@ -1,0 +1,54 @@
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #000;
+  display: flex;
+  justify-content: center; /* Ensures icons are spaced out evenly */
+  align-items: center;
+  padding: 10px 0; /* Adds padding to make it touch-friendly */
+  z-index: 9999;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+  font-size: 12px;
+  flex-grow: 1; /* Ensures each icon gets equal space */
+  text-align: center;
+}
+
+.nav-item span {
+  margin-top: 4px;
+  font-size: 10px;
+}
+
+.nav-item svg {
+  margin-bottom: 2px;
+  font-size: 24px; /* Ensure the icon is a reasonable size for mobile */
+}
+
+.nav-item.active {
+  font-weight: bold;
+  color: #007bff;
+}
+
+/* Mobile specific styles */
+@media (max-width: 768px) {
+  .bottom-nav {
+    height: 60px; /* Reduce height for smaller screens */
+    padding: 5px 0;
+    justify-content: center;
+  }
+
+  .nav-item span {
+    font-size: 10px; /* Make the text smaller for mobile */
+  }
+
+  .nav-item svg {
+    font-size: 20px; /* Reduce the icon size slightly for mobile */
+  }
+}

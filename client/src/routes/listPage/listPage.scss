@@ -1,0 +1,41 @@
+@import "../../responsive.scss";
+
+.listPage {
+  display: flex;
+  height: 100%;
+
+  .listContainer {
+    flex: 3;
+    height: 100%;
+
+    .wrapper{
+      height: 100%;
+      padding-right: 50px;
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      overflow-y: scroll;
+      padding-bottom: 50px;
+      
+    }
+  }
+  .mapContainer {
+    flex: 2;
+    height: 100%;
+    background-color: #fcf5f3;
+    flex-direction: column;
+
+    @include md{
+      flex: 1; // Reduce the size of the map container for medium devices
+    height: 400px; // Set a fixed height for the map on medium devices
+    display: flex;
+    flex-direction: column;
+    }
+    @include sm {
+      flex: 1;
+      height: 300px; // Set a smaller height for the map on small devices
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
